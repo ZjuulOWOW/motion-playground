@@ -1,37 +1,34 @@
-// Backend
-
-function createMouseMotion(target, options){
-
-    const {
-        type = 'look',
-        scope,
-        stiffness = 1,
-        ease = 'ease'
-    } = options
-
-    const el = document.querySelector(target)
-    const container = (scope ? document.querySelector(scope) : document) //if scopeContainer{document.querySelector(scopeContainer)} else{document}
-    const bounds = el.getBoundingClientRect()
-    const elX = bounds.x + (bounds.right - bounds.x) / 2
-    const elY = bounds.y + (bounds.bottom - bounds.y) / 2
-
-    container.addEventListener('mousemove', (e) => {
-        el.animate(
-            {
-                transform: `translate3D(${-(elX - e.clientX) / stiffness}px,${-(elY - e.clientY) / stiffness}px,0)`
-            },
-            {
-                easing: ease,
-                fill: "forwards",
-                duration: 1000
-            })
-    })
-}
-
-// Usage
+import {createMouseMotion} from "./scripts/lib/createMouseMotion.js";
 
 createMouseMotion('#js-mousechaser', {
     scope: '#js-container',
     stiffness: 3,
     ease: 'linear'
+})
+
+createMouseMotion('#js-mousechaser2', {
+    scope: '#js-container2',
+    stiffness: 3,
+    ease: 'ease-in-out',
+    easeOnLeave: 'ease-in-out'
+})
+
+createMouseMotion('#js-container2', {
+    scope: '#js-container2',
+    stiffness: 3,
+    ease: 'linear',
+    easeOnLeave: 'elastic'
+})
+
+createMouseMotion('#js-mousechaser3', {
+    scope: '#js-container3',
+    stiffness: 1,
+    damping: 6000,
+    ease: 'ease',
+    returnOnLeave: false
+})
+
+createMouseMotion('#js-mousechaser4', {
+    stiffness: 1,
+    damping: 1000
 })
