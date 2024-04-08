@@ -39,16 +39,22 @@ createMouseMotion('#js-mousechaser4', {
 })
 
 createZoomMotion('.zoom1', {
-    offset: 200,
-    direction: 'out',
-    type: 'scale',
-    scale: 2
+    // direction: 'in',
+    // scale: 4,
+    // start: 800,
+    // end: 'bottom-=400'
 })
 
 createZoomMotion('.zoom2', {
-    duration: 300,
     direction: 'out',
     type: 'scale',
-    scale: 10,
-    offset: 900
+    scale: 2,
+    start: 400,
+    end: 'bottom+=100',
+    ease: 'ease-in-out'
+})
+
+createZoomMotion('.zoom3',{
+    type: 'scale',
+    scale: 40
 })

@@ -1,14 +1,15 @@
 body{
     margin: 0;
+    font-family: arial black;
 }
 
 .mousechaser{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+    height: 40px;
+    min-width: 40px;
     background: #252525;
     transform-origin: right;
     pointer-events: none;
+    color: white;
 }
 
 .container{
@@ -40,7 +41,27 @@ section{
     justify-content: center;
 }
 
-.zoom1{
+.zoom1 {
     background: darkred;
-    padding-bottom: 1200px;
+    padding-bottom: 800px;
+    color: white;
+}
+
+.zoom2{
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+}
+
+.zoom3{
+    height: 100vh;
+    width: 100vw;
+    background: #2f2f2f;
+    position: absolute;
+}
+
+.section--zoom3{
+    align-items: center;
+    position: relative;
+    height: 100vh;
 }
