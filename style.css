@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 .mousechaser{
     height: 100px;
     width: 100px;
@@ -34,4 +38,9 @@ section{
     margin-top: 240px;
     display: flex;
     justify-content: center;
+}
+
+.zoom1{
+    background: darkred;
+    padding-bottom: 1200px;
 }

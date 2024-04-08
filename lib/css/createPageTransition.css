@@ -1,0 +1,12 @@
+#transition{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    background: black;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
