@@ -1,20 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script type="module" async src="/main.js"></script>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lib/css/createPageTransition.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite App</title>
-  </head>
-  <body>
-  <header>
+</head>
+<body>
+<header>
     <a href="index.html">index</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-  </header>
-  <h1 class="title">About</h1>
-  </body>
+</header>
+<div data-barba="wrapper" class="barba-wrapper">
+    <main class="barba-main" data-barba="container" data-barba-namespace="page-b">
+        <section class="section--landing">
+            <span class="clip">
+                <h1 class="title">Contact</h1>
+            </span>
+            <img src="img/placeholder.png" class="img--full" alt="">
+        </section>
+    </main>
+</div>
+</body>
+<script type="module" src="transition2.js"></script>
 </html>

@@ -1,6 +1,9 @@
 body{
     margin: 0;
-    font-family: arial black;
+    font-family: 'Verdana';
+    font-weight: 200;
+    background: #eaeaea;
+    color: black;
 }
 
 .mousechaser{
@@ -36,9 +39,7 @@ body{
 }
 
 section{
-    margin-top: 240px;
-    display: flex;
-    justify-content: center;
+    margin: 0 16px;
 }
 
 .zoom1 {
@@ -56,7 +57,7 @@ section{
 .zoom3{
     height: 100vh;
     width: 100vw;
-    background: #2f2f2f;
+    background: darkorange;
     position: absolute;
 }
 
@@ -64,4 +65,52 @@ section{
     align-items: center;
     position: relative;
     height: 100vh;
+}
+
+h1{
+    font-size: 160px;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.barba-main{
+    position: absolute;
+    width: 100%;
+    background: #eaeaea;
+    z-index: -1;
+}
+
+.img--full{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 9;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #d3cbc6;
+}
+
+header>a{
+    color: black;
+}
+
+.clip{
+    overflow: hidden;
+    display: inline-block;
+}
+
+.clip.is-transitioning{
+    max-height: 0;
+}
+
+.title.is-transitioning{
+    transform: translate3d(0, 100%, 0);
+}
+
+.clip > .title{
+    margin: 0;
 }

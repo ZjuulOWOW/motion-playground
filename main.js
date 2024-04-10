@@ -1,11 +1,11 @@
 import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
 import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js";
-
-createPageTransition({
-    duration: 800,
-    background: 'darkblue'
-})
+//
+// createPageTransition({
+//     duration: 800,
+//     background: 'darkblue'
+// })
 
 createMouseMotion('#js-mousechaser', {
     scope: '#js-container',
@@ -17,38 +17,36 @@ createMouseMotion('#js-mousechaser', {
 createMouseMotion('#js-mousechaser2', {
     scope: '#js-container2',
     range: 40,
+    duration: 800
 })
 
 createMouseMotion('#js-container2', {
     scope: '#js-container2',
     range: 30,
-    ease: 'linear',
+    duration: 800
 })
 
 createMouseMotion('#js-mousechaser3', {
     scope: '#js-container3',
     range: -100,
-    duration: 1000,
     ease: 'ease',
     returnOnLeave: false
 })
 
 createMouseMotion('#js-mousechaser4', {
     range: 100,
-    duration: 1000
+    duration: 0
 })
 
 createZoomMotion('.zoom1', {
-    // direction: 'in',
-    // scale: 4,
-    // start: 800,
-    // end: 'bottom-=400'
+    scale: 4,
+    start: 800,
 })
 
 createZoomMotion('.zoom2', {
     direction: 'out',
     type: 'scale',
-    scale: 2,
+    scale: 10,
     start: 400,
     end: 'bottom+=100',
     ease: 'ease-in-out'
