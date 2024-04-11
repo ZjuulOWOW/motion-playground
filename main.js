@@ -45,11 +45,10 @@ createZoomMotion('.zoom1', {
 
 createZoomMotion('.zoom2', {
     direction: 'out',
-    type: 'scale',
-    scale: 10,
-    start: 400,
-    end: 'bottom+=100',
-    ease: 'ease-in-out'
+    scale: 20,
+    start: 732,
+    end: 'bottom+=2000',
+    path: '#path'
 })
 
 createZoomMotion('.zoom3',{
