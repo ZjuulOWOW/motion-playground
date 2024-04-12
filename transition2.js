@@ -47,7 +47,7 @@ barba.init({
                             maxHeight: [0, '200px']
                         },
                         {
-                            duration: 400,
+                            duration: 600,
                             fill: 'forwards',
                             easing: 'cubic-bezier(0,1,1,1)'
                         }).onfinish = () => {

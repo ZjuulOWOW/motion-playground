@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 400px;
-    width: 600px;
+    width: 1400px;
     background: #eeeeee;
     border-radius: 16px;
     position: relative;
@@ -114,4 +114,9 @@ header>a{
 
 .clip > .title{
     margin: 0;
+}
+
+i{
+    font-size: 80px;
+    color: black;
 }
