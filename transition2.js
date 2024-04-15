@@ -18,13 +18,8 @@ barba.init({
                         duration: 1600,
                         fill: 'forwards',
                         easing: 'linear'
-                    }).onfinish = () => {
-                    resolve()
-                    inTransition = false
-                }
-
+                    }).onfinish = () => resolve()
             })
-
         },
         afterLeave({current}) {
             current.container.remove()

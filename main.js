@@ -1,11 +1,12 @@
 import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
 import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js";
-//
-// createPageTransition({
-//     duration: 800,
-//     background: 'darkblue'
-// })
+
+createPageTransition({
+    duration: 800,
+    direction: 'bottom bottom',
+    background: 'darkblue'
+})
 
 createMouseMotion('#js-mousechaser', {
     scope: '#js-container',

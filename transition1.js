@@ -1,5 +1,4 @@
 import barba from '@barba/core'
-import gsap from 'gsap'
 
 const el = document.createElement('div')
 el.setAttribute('id', 'transition')
