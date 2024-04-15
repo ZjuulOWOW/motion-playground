@@ -3,9 +3,11 @@ import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js";
 
 createPageTransition({
-    duration: 800,
-    direction: 'bottom bottom',
-    background: 'darkblue'
+    duration: 500,
+    direction: 'top bottom',
+    background: 'darkblue',
+    color: 'pink',
+    customTitle: 'Custom'
 })
 
 createMouseMotion('#js-mousechaser', {
@@ -38,7 +40,7 @@ createMouseMotion('#js-mousechaser3', {
 
 createMouseMotion('#js-mousechaser4', {
     range: 100,
-    duration: 0
+    duration: 800
 })
 
 createZoomMotion('.zoom1', {
