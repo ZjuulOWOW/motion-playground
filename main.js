@@ -2,17 +2,15 @@ import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
 import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js"
 
-// page transition buiten init, zodat barba niet de hele tijd opnieuw laadt
-createPageTransition({
-    duration: 500,
-    direction: 'top bottom',
-    background: 'darkblue',
-    color: 'pink',
-    customTitle: 'Custom'
-})
+function init(){
+    createPageTransition({
+        duration: 500,
+        direction: 'top bottom',
+        background: 'darkblue',
+        color: 'pink',
+        customTitle: 'Custom'
+    })
 
-function init(){    
-    
     createMouseMotion('#js-mousechaser', {
         scope: '#js-container',
         range: 10,
@@ -63,8 +61,6 @@ function init(){
         scale: 40
     })
 }
-
 init()
 
 export {init}
-
