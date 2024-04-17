@@ -5,7 +5,7 @@ import {createZoomMotion} from "./lib/scripts/createZoomMotion.js"
 function init(){ //createMotion()?
     createPageTransition({
         duration: 500,
-        direction: 'top left',
+        direction: 'top bottom',
         background: 'black',
         color: 'pink',
         customTitle: 'Custom',
@@ -48,7 +48,7 @@ function init(){ //createMotion()?
 
     createZoomMotion('.zoom1', {
         scale: 4,
-        start: 3000,
+        start: 800,
     })
 
     createZoomMotion('.zoom2', {

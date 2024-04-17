@@ -48,6 +48,7 @@ section{
     object-fit: contain;
     object-position: top;
     clip-path: url("#path");
+    -webkit-clip-path: url("#path");
 }
 
 .zoom3{
