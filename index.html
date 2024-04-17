@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lib/css/createPageTransition.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,34 +18,25 @@
 <div data-barba="wrapper">
     <main class="barba-main" data-barba="container" data-barba-namespace="page-a">
         <section>
-            <div class="container" id="js-container">
-                <div id="js-mousechaser" style="perspective: 1000px; background: red">
-                    <h2>lorem ipsum</h2>
-        <!--            <svg class="bi" width="100" height="100" fill="black">-->
-        <!--            <use xlink:href="/node_modules/bootstrap-icons/bootstrap-icons.svg#heart-fill"/>-->
-        <!--            </svg>-->
+            <div class="w-100 h-[100vh] flex justify-center items-center bg-[#dfe2e8]" id="js-container">
+                <div class="w-[120px] h-[120px] bg-black rounded-[50%]" id="js-mousechaser">
                 </div>
-                <div class="center"></div>
+                <div class="absolute w-[120px] h-[120px] border-2 border-red-500"></div>
             </div>
         </section>
-        <section>
-            <div class="container container2" id="js-container2">
+        <section class="flex justify-center">
+            <div class="w-[300px] h-[300px] flex justify-center items-center bg-[#dfe2e8] rounded-[50%]" id="js-container2">
                 <div class="mousechaser" id="js-mousechaser2">Lorem ipsum</div>
                 <div class="center"></div>
             </div>
         </section>
         <section>
-            <div class="container container3" id="js-container3">
-                <div class="mousechaser" id="js-mousechaser3"></div>
+            <div class="w-100 h-[100vh] flex justify-center items-center" id="js-container3">
+                <div class="w-[120px] h-[120px] bg-black rounded-[50%]" id="js-mousechaser3"></div>
                 <div class="center"></div>
             </div>
         </section>
-        <section>
-            <div class="container container3" id="js-container4">
-                <div class="mousechaser" id="js-mousechaser4"></div>
-                <div class="center"></div>
-            </div>
-        </section>
+        <div class="w-[40px] h-[40px] bg-black rounded-[50%] pointer-events-none" id="js-mousechaser4"></div>
         <section class="zoom1">
             <h1>lorem ipsum</h1>
         </section>
