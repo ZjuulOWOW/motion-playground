@@ -15,15 +15,22 @@
     display: flex;
 }
 
+@keyframes test {
+    from{transform: translate(100vh);}
+    to{transform: none;}
+}
+
 .barba-main.unload{
     height: 100vh;
     overflow: scroll;
     pointer-events: none;
 }
 
-.barba-main.load{
+.barba-main{
+    transform: none;
     height: 100vh;
-    overflow: hidden;
+    /* animation: test 4s; */
+    /* overflow: hidden; */
 }
 
 body.transition{

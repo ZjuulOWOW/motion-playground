@@ -2,6 +2,15 @@ import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
 import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js"
 
+document.querySelector('.barba-main').animate({
+    // transform: `none`,
+},
+    {
+        duration: 800,
+        fill: 'forwards',
+        easing: 'cubic-bezier(0,1,1,1)'
+    })
+
 function init(){ //createMotion()?
     createPageTransition({
         duration: 500,
@@ -51,17 +60,18 @@ function init(){ //createMotion()?
         start: 800,
     })
 
-    createZoomMotion('.zoom2', {
+    createZoomMotion('.zoom2-container', {
         direction: 'out',
-        path: '#path',
-        end: 'bottom+=1000',
+        path: '.zoom2-mask',
+        start: 400,
+        end: 'bottom+=2000',
         ease: 'expo'
     })
 
-    createZoomMotion('.zoom3',{
-        type: 'scale',
-        scale: 40
-    })
+    // createZoomMotion('.zoom3',{
+    //     type: 'scale',
+    //     scale: 40
+    // })
 }
 init()
 
