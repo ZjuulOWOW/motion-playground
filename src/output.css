@@ -604,6 +604,14 @@ video {
   position: relative;
 }
 
+.sticky {
+  position: sticky;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -624,28 +632,12 @@ video {
   height: 300px;
 }
 
-.h-40 {
-  height: 10rem;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
 .w-\[120px\] {
   width: 120px;
 }
 
 .w-\[300px\] {
   width: 300px;
-}
-
-.w-\[40px\] {
-  width: 40px;
 }
 
 .transform {

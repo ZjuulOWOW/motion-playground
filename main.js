@@ -2,15 +2,6 @@ import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
 import {createPageTransition} from './lib/scripts/createPageTransition.js'
 import {createZoomMotion} from "./lib/scripts/createZoomMotion.js"
 
-document.querySelector('.barba-main').animate({
-    // transform: `none`,
-},
-    {
-        duration: 800,
-        fill: 'forwards',
-        easing: 'cubic-bezier(0,1,1,1)'
-    })
-
 function init(){ //createMotion()?
     createPageTransition({
         duration: 500,
@@ -18,12 +9,16 @@ function init(){ //createMotion()?
         background: 'black',
         color: 'pink',
         customTitle: 'Custom',
-        type: 'flow'
+        type: 'flow',
+        WAAPIvarsLeave: {
+            clipPath: ['inset(0 50%)', 'inset(0 0)'],
+        },
+        WAAPIvarsEnter: {},
     })
 
     createMouseMotion('#js-mousechaser', {
         scope: '#js-container',
-        range: 10,
+        range: 90,
         duration: 1000,
         ease: 'linear',
         use3D: true
@@ -60,12 +55,13 @@ function init(){ //createMotion()?
         start: 800,
     })
 
-    createZoomMotion('.zoom2-container', {
-        direction: 'out',
-        path: '.zoom2-mask',
+    createZoomMotion('.zoom2-mask', {
+        direction: 'in',
+        clipContainer: '.zoom2-container',
         start: 400,
         end: 'bottom+=2000',
-        ease: 'expo'
+        ease: 'expo',
+        scale: 4
     })
 
     // createZoomMotion('.zoom3',{
