@@ -118,7 +118,6 @@ i{
 }
 
 .zoom2-container{
-    /* position: sticky!important; */
     overflow: hidden;
     height: 100vh;
 }
@@ -139,4 +138,3 @@ i{
 .projects-link:nth-child(even){
     right: 0;
 }
-

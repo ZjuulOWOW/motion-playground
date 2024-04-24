@@ -1,19 +1,9 @@
-import {createMouseMotion} from './lib/scripts/createMouseMotion.js'
-import {createPageTransition} from './lib/scripts/createPageTransition.js'
-import {createZoomMotion} from "./lib/scripts/createZoomMotion.js"
+import { createMouseMotion } from './lib/scripts/createMouseMotion.js'
+import { createPageTransition } from './lib/scripts/createPageTransition.js'
+import { createZoomMotion } from "./lib/scripts/createZoomMotion.js"
 
-function init(){ //createMotion()?
+function init() { //createMotion()?
     createPageTransition({
-        duration: 500,
-        direction: 'top bottom',
-        background: 'black',
-        color: 'pink',
-        customTitle: 'Custom',
-        type: 'flow',
-        WAAPIvarsLeave: {
-            clipPath: ['inset(0 50%)', 'inset(0 0)'],
-        },
-        WAAPIvarsEnter: {},
     })
 
     createMouseMotion('#js-mousechaser', {
@@ -71,4 +61,4 @@ function init(){ //createMotion()?
 }
 init()
 
-export {init}
+export { init }

@@ -4,7 +4,6 @@ const imgs = document.querySelectorAll('.projects-link')
 imgs.forEach((img) => {
     img.addEventListener('click', () => {
         img.classList.add('in-transition')
-        console.log('test')
         transition(img)
     })
 })
@@ -49,7 +48,7 @@ function transition(img) {
                     }
                 })
             },
-            afterLeave({ current }) {
+            afterLeave() {
             },
             enter({next}) {
                 return new Promise(resolve => {
@@ -62,7 +61,7 @@ function transition(img) {
                         }).onfinish = () => resolve()
                 })
             },
-            afterEnter({ next }) {
+            afterEnter() {
                 init()
             }
         }]

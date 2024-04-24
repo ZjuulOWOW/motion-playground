@@ -20,7 +20,7 @@
     to{transform: none;}
 }
 
-.barba-main.unload{
+.barba-main.is-transitioning{
     height: 100vh;
     overflow: scroll;
     pointer-events: none;
@@ -33,7 +33,7 @@
     /* overflow: hidden; */
 }
 
-body.transition{
+body.is-transitioning{
     overflow: hidden;
 }
 
