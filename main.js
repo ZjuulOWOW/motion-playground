@@ -4,6 +4,44 @@ import { createZoomMotion } from "./lib/scripts/createZoomMotion.js"
 
 function init() { //createMotion()?
     createPageTransition({
+        sync: true,
+        leave:[
+            {
+            target: '.barba-wrapper',
+            keyframes:{
+                    transform: 'scale(.5)',
+                },
+            duration: 1000,
+            ease: 'ease-out',
+        },
+        {
+            target: 'main',
+            keyframes: {
+                transform: 'translate3d(0,-100vh,0)',
+            },
+            duration: 1000,
+            ease: 'ease',
+        },
+        ],
+        enter:[{
+            target: 'main',
+            keyframes: {
+                transform: ['translate3d(0,100vh,0)', 'translate3d(0,0,0)'],
+            },
+            duration: 1000,
+            ease: 'ease',
+            
+        },
+        {
+            target: '.barba-wrapper',
+            keyframes: {
+                transform: 'scale(1)'
+            },
+            duration: 1000,
+            ease: 'ease',
+            delay: 750
+        },
+    ]
     })
 
     createMouseMotion('#js-mousechaser', {

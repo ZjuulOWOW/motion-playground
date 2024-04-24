@@ -2,7 +2,7 @@ body{
     margin: 0;
     font-family: 'Verdana';
     font-weight: 200;
-    background: #eaeaea;
+    background: rgb(16, 14, 90);
     color: black;
     max-width: 100vw;
     overflow-x: hidden;

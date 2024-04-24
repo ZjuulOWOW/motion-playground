@@ -15,11 +15,6 @@
     display: flex;
 }
 
-@keyframes test {
-    from{transform: translate(100vh);}
-    to{transform: none;}
-}
-
 .barba-main.is-transitioning{
     height: 100vh;
     overflow: scroll;
@@ -27,13 +22,16 @@
 }
 
 .barba-main{
-    transform: none;
-    height: 100vh;
-    /* animation: test 4s; */
-    /* overflow: hidden; */
+    min-height: 100vh;
 }
 
 body.is-transitioning{
     overflow: hidden;
 }
 
+.barba-wrapper.is-transitioning{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
