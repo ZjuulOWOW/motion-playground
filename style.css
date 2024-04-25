@@ -8,6 +8,11 @@ body{
     overflow-x: hidden;
     background: #eaeaea;
 }
+
+.section--landing{
+    padding-top: 160px;
+}
+
 .mousechaser{
     height: 40px;
     min-width: 40px;
@@ -59,6 +64,7 @@ h1{
     font-size: 160px;
     font-weight: 500;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 
