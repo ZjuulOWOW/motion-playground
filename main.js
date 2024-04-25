@@ -3,45 +3,108 @@ import { createPageTransition } from './lib/scripts/createPageTransition.js'
 import { createZoomMotion } from "./lib/scripts/createZoomMotion.js"
 
 function init() { //createMotion()?
+    // createPageTransition({
+    //     sync: true,
+    //     leave:[
+    //         {
+    //         target: '.barba-wrapper',
+    //         keyframes:{
+    //                 transform: 'scale(.5)',
+    //             },
+    //         duration: 1000,
+    //         ease: 'ease-out',
+    //     },
+    //     {
+    //         target: 'main',
+    //         keyframes: {
+    //             transform: 'translate3d(0,-100vh,0)',
+    //         },
+    //         duration: 1500,
+    //         ease: 'ease',
+    //     },
+    //     ],
+    //     enter:[{
+    //         target: 'main',
+    //         keyframes: {
+    //             transform: ['translate3d(0,100vh,0)', 'translate3d(0,0,0)'],
+    //         },
+    //         duration: 1500,
+    //         ease: 'ease',
+    //     },
+    //     {
+    //         target: '.barba-wrapper',
+    //         keyframes: {
+    //             transform: 'scale(1)'
+    //         },
+    //         duration: 1000,
+    //         ease: 'ease',
+    //         delay: 1000
+    //     }
+    // ]
+    // })
+
     createPageTransition({
-        sync: true,
-        leave:[
-            {
+        leave: [{
             target: '.barba-wrapper',
-            keyframes:{
-                    transform: 'scale(.5)',
-                },
-            duration: 1000,
+            keyframes: {
+                transform: 'scale(.5)',
+            },
+            duration: 2000,
             ease: 'ease-out',
         },
         {
-            target: 'main',
+            target: '#motion-transition',
             keyframes: {
-                transform: 'translate3d(0,-100vh,0)',
+                clipPath: ['inset(100% 0 0 0)', 'inset(0 0)'],
             },
-            duration: 1000,
+            duration: 750,
             ease: 'ease',
-        },
-        ],
-        enter:[{
-            target: 'main',
-            keyframes: {
-                transform: ['translate3d(0,100vh,0)', 'translate3d(0,0,0)'],
-            },
-            duration: 1000,
-            ease: 'ease',
-            
         },
         {
+            target: 'main',
+            keyframes: {
+                transform: 'translate3d(0,160px,0)',
+                opacity: 0
+            },
+            duration: 1250,
+            ease: 'ease',
+        },
+        {
+            target: '.transition-title',
+            keyframes: {
+                transform: ['translate3d(0,100%,0)', 'translate3d(0,-100%,0)'],
+                opacity: [0, 1, 1]
+            },
+            duration: 1250,
+            ease: 'cubic-bezier(0,.75,1,.25)',
+            delay: 750
+        }
+        ],
+        enter: [{
             target: '.barba-wrapper',
             keyframes: {
-                transform: 'scale(1)'
+                transform: 'scale(1)',
             },
-            duration: 1000,
+            duration: 1250,
             ease: 'ease',
-            delay: 750
         },
-    ]
+        {
+            target: '#motion-transition',
+            keyframes: {
+                clipPath: ['inset(0 0)', 'inset(0 0 100% 0)'],
+            },
+            duration: 750,
+            ease: 'ease',
+        },
+        {
+            target: 'main',
+            keyframes: {
+                opacity: [0, 1]
+            },
+            duration: 1250,
+            ease: 'ease',
+        }
+        ]
     })
 
     createMouseMotion('#js-mousechaser', {
