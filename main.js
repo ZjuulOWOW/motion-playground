@@ -155,6 +155,24 @@ function init() {
     // })
 
     // createPageTransition({
+    //     sync: true,
+    //     leave: {
+    //         target: "main",
+    //         keyframes: {
+    //             opacity: 0,
+    //         },
+    //         duration: 1000
+    //     },
+    //     enter: {
+    //         target: "main",
+    //         keyframes: {
+    //             opacity: [0, 1],
+    //         },
+    //         duration: 1000
+    //     }
+    // })
+
+    // createPageTransition({
     //     leave: [
     //         {
     //             target: "#motion-transition",
@@ -214,8 +232,8 @@ function init() {
         })
     })
 
-    createPageTransition(
-        [{
+    createPageTransition([
+        {
             fromNamespace: "about",
             toNamespace: "project",
             leave: [
@@ -226,7 +244,7 @@ function init() {
                     },
                     duration: 1000,
                     ease: "cubic-bezier(0,1,1,1)",
-                    delay: 500
+                    delay: 500,
                 },
                 {
                     target: ".projects-link:not(.is-clicked)",
@@ -304,9 +322,9 @@ function init() {
                     duration: 800,
                     ease: "ease",
                 },
-            ]
-        }]
-    )
+            ],
+        },
+    ])
 
     createMouseMotion("#js-mousechaser", {
         scope: "#js-container",
@@ -343,23 +361,18 @@ function init() {
     })
 
     createZoomMotion(".zoom1", {
-        scale: 4,
+        scale: .4,
         start: 800,
     })
 
     createZoomMotion(".zoom2-mask", {
         direction: "in",
-        clipContainer: ".zoom2-container",
-        start: 400,
-        end: "bottom+=2000",
+        start: 'top',
+        end: "3000",
+        pin: ".zoom2-container",
         ease: "expo",
         scale: 4,
     })
-
-    // createZoomMotion('.zoom3',{
-    //     type: 'scale',
-    //     scale: 40
-    // })
 }
 init()
 
