@@ -305,6 +305,10 @@ function init() {
                     delay: 500,
                 },
             ],
+            leaveVars: ({ next }) => {
+                const title = document.querySelector(".transition-title")
+                title.innerHTML = next.namespace
+            },
             enter: [
                 {
                     target: "#motion-transition",
@@ -361,14 +365,15 @@ function init() {
     })
 
     createZoomMotion(".zoom1", {
-        scale: .4,
-        start: 800,
+        scale: 0.9,
+        start: -1000,
+        direction: "out",
     })
 
     createZoomMotion(".zoom2-mask", {
         direction: "in",
-        start: 'top',
-        end: "3000",
+        start: "top",
+        end: 3000, //end is from the end of element
         pin: ".zoom2-container",
         ease: "expo",
         scale: 4,
