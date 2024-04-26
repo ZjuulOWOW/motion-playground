@@ -208,49 +208,105 @@ function init() {
     // })
 
     const imgs = document.querySelectorAll(".projects-link")
-    let target
     imgs.forEach((img) => {
         img.addEventListener("click", (e) => {
             img.classList.add("is-clicked")
         })
     })
 
-    createPageTransition({
-        leave: [{
-            target: ".projects-link.is-clicked",
-            keyframes: {
-                width: "100%",
+    createPageTransition(
+        [{
+            fromNamespace: "about",
+            toNamespace: "project",
+            leave: [
+                {
+                    target: ".projects-link.is-clicked",
+                    keyframes: {
+                        width: "100%",
+                    },
+                    duration: 1000,
+                    ease: "cubic-bezier(0,1,1,1)",
+                    delay: 500
+                },
+                {
+                    target: ".projects-link:not(.is-clicked)",
+                    keyframes: {
+                        opacity: 0,
+                    },
+                    duration: 500,
+                    ease: "cubic-bezier(0,1,1,1)",
+                },
+                {
+                    target: ".title",
+                    keyframes: {
+                        transform: ["none", "translate3d(0,100%,0)"],
+                    },
+                    duration: 300,
+                    ease: "cubic-bezier(0,1,1,1)",
+                },
+            ],
+            enter: {
+                target: ".title",
+                keyframes: {
+                    transform: ["translate3d(0,100%,0)", "none"],
+                },
+                duration: 300,
+                ease: "cubic-bezier(0,1,1,1)",
             },
-            duration: 1000,
-            ease: "cubic-bezier(0,1,1,1)",
-            delay: 500,
         },
         {
-            target: ".projects-link:not(.is-clicked)",
-            keyframes: {
-                opacity: 0,
-            },
-            duration: 500,
-            ease: "cubic-bezier(0,1,1,1)"
-        },
-        {
-            target: ".title",
-            keyframes: {
-                transform: ["none", "translate3d(0,100%,0)"],
-            },
-            duration: 300,
-            ease: "cubic-bezier(0,1,1,1)",
-        }],
-        enter: {
-            target: ".title",
-            keyframes: {
-                transform: ["translate3d(0,100%,0)", "none"],
-            },
-            duration: 300,
-            ease: "cubic-bezier(0,1,1,1)",
-        },
-    })
-    
+            leave: [
+                {
+                    target: "#motion-transition",
+                    keyframes: {
+                        clipPath: ["inset(100% 0 0 0)", "inset(0 0)"],
+                    },
+                    duration: 750,
+                    ease: "ease",
+                },
+                {
+                    target: "main",
+                    keyframes: {
+                        transform: "translate3d(0,160px,0)",
+                        opacity: 0,
+                    },
+                    duration: 1000,
+                    ease: "ease",
+                },
+                {
+                    target: ".transition-title",
+                    keyframes: {
+                        transform: [
+                            "translate3d(0,100%,0)",
+                            "translate3d(0,-100%,0)",
+                        ],
+                        opacity: [0, 1, 1],
+                    },
+                    duration: 750,
+                    ease: "cubic-bezier(0,.5,1,.5)",
+                    delay: 500,
+                },
+            ],
+            enter: [
+                {
+                    target: "#motion-transition",
+                    keyframes: {
+                        clipPath: ["inset(0 0)", "inset(0 0 100% 0)"],
+                    },
+                    duration: 750,
+                    ease: "ease",
+                },
+                {
+                    target: "main",
+                    keyframes: {
+                        transform: ["scale(.8)", "scale(1)"],
+                    },
+                    duration: 800,
+                    ease: "ease",
+                },
+            ]
+        }]
+    )
 
     createMouseMotion("#js-mousechaser", {
         scope: "#js-container",
