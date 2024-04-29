@@ -366,8 +366,8 @@ function init() {
 
     createZoomMotion(".zoom1", {
         scale: 0.9,
-        start: -1000,
         direction: "out",
+        pin: true
     })
 
     createZoomMotion(".zoom2-mask", {
