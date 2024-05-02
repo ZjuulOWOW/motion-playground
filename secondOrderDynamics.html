@@ -14,25 +14,31 @@
     <a href="index.html">index</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="secondOrderDynamics.html">secondOrderDynamics </a>
+    <a href="secondOrderDynamics.html">secondOrderDynamics</a>
 </header>
 <div class="barba-wrapper" data-barba="wrapper">
-    <main class="barba-main" data-barba="container" data-barba-namespace="project">
+    <main class="barba-main" data-barba="container" data-barba-namespace="secondOrderDynamics">
         <div id="motion-transition">
             <span class="clip">
                 <h1 class="transition-title">lorem ipsum</h1>
             </span>
         </div>
         <section class="section--landing">
+            <div class="cursor"></div>
             <span class="clip">
-                <h1 class="title">Project</h1>
+                <h1 class="title">secondOrderDynamics</h1>
             </span>
-            <a href="" class="">
-                <img src="img/placeholder.jpg" class="img--full" alt="">
-            </a>
+            <label for="speed">Speed:</label>
+            <input type="range" id="speed" min="0" max="3" value="1" step="0.01">
+            <label for="damping">Damping:</label>
+            <input type="range" id="damping" min="0" max="3" value="1" step="0.01">
+            <label for="response">Response:</label>
+            <input type="range" id="response" min="-3" max="3" value="1" step="0.01">
+            <canvas id="myChart" width="200" height="200"></canvas>
         </section>
     </main>
 </div>
 </body>
 <script type="module" src="main.js"></script>
+<script type="module" src="secondOrderDynamics.js"></script>
 </html>
