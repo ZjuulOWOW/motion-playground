@@ -1,0 +1,69 @@
+    @font-face {
+    font-family: 'Akira Expanded';
+    src: local('Akira Expanded');
+  }
+  
+  @font-face {
+    font-family: 'Helvetica Neue';
+    src: local('Helvetica Neue');
+  }
+
+  .play {
+    background: rgb(212, 255, 122);
+    color: black;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .title {
+    margin-bottom: 40px;
+  }
+  
+  .controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .input {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+  }
+  
+  .el {
+    height: 80px;
+    width: 80px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .demo {
+    display: flex;
+    position: relative;
+    margin-top: 16px;
+  }
+  
+  .demo:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgb(212, 255, 122);
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+  }
+  
+  .input input[type="range"] {
+    height: 8px;
+    -webkit-appearance: none;
+    background-color: rgb(212, 255, 122);
+    margin: 12px 0;
+    border-radius: 8px;
+  }
+  
