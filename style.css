@@ -143,4 +143,21 @@ header>a{
     height: 40px;
     width: 40px;
     background: #252525;
+    pointer-events: none;
+}
+
+.chart{
+    width: 50%;
+}
+
+button{
+    padding: 16px 32px;
+    background: #d3cbc6;
+    border-radius: 8px;
+}
+
+.animation--test{
+    height: 20px;
+    width: 20px;
+    background: green;
 }

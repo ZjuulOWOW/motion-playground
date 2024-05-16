@@ -338,15 +338,15 @@ function init() {
         use3D: true,
     })
 
-    createMouseMotion("#js-mousechaser2", {
-        scope: "#js-container2",
+    createMouseMotion("#js-mousechaser", {
+        scope: "#js-container",
         range: 20,
         duration: 1600,
         use3D: true,
     })
 
-    createMouseMotion("#js-container2", {
-        scope: "#js-container2",
+    createMouseMotion("#js-container", {
+        scope: "#js-container",
         range: 30,
         duration: 1600,
     })
@@ -373,10 +373,10 @@ function init() {
     createZoomMotion(".zoom2-mask", {
         direction: "in",
         start: "top",
-        end: 3000, //end is from the end of element
+        end: 3000, 
         pin: ".zoom2-container",
         ease: "expo",
-        scale: 6,
+        scale: 4,
     })
 }
 init()
