@@ -7,75 +7,7 @@ body{
     max-width: 100vw;
     overflow-x: hidden;
     background: #eaeaea;
-}
-
-.section--landing{
-    padding-top: 160px;
-}
-
-.mousechaser{
-    height: 40px;
-    min-width: 40px;
-    background: #252525;
-    transform-origin: right;
-    pointer-events: none;
-    color: white;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    width: 1400px;
-    border-radius: 16px;
-    position: relative;
-}
-
-.container2{
-    border-radius: 50%;
-    width: 400px;
-}
-
-section{
-    margin: 0 16px;
-}
-
-.zoom1 {
-    background: darkred;
-    padding-bottom: 800px;
-    color: white;
-}
-
-.zoom3{
-    height: 100vh;
-    width: 100vw;
-    background: darkorange;
-    position: absolute;
-}
-
-.section--zoom3{
-    align-items: center;
-    position: relative;
-    height: 100vh;
-}
-
-h1{
-    font-size: 160px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-
-.barba-main{
-    position: absolute;
-    width: 100%;
-    /* z-index: -1; */
-}
-
-.img--full{
-    width: 100%;
+    height: 200vh;
 }
 
 header{
@@ -93,71 +25,76 @@ header>a{
     color: rgb(46, 46, 46);
 }
 
+h1{
+    font-size: 160px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+}
+
+section{
+    margin: 0 16px;
+}
+
+section:first-of-type{
+    margin-top: 160px;
+}
+
+.section--chaser{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.section--scroll{
+    height: 400vh;
+    display: flex;
+    justify-content: center;
+}
+
+.barba-main{
+    position: absolute;
+    width: 100%;
+}
+
+.img--full{
+    width: 100%;
+}
+
 .clip{
     overflow: hidden;
     display: inline-block;
 }
 
-.clip.is-transitioning{
-    max-height: 0;
+.scroll-el{
+    width: 160px;
+    height: 160px;
+    background-color: #252525;
+    position: sticky;
+    top: 50vh;
 }
 
-.title.is-transitioning{
-    transform: translate3d(0, 100%, 0);
-}
-
-.clip > .title{
-    margin: 0;
-}
-
-.zoom2{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.zoom2-container{
-    overflow: hidden;
-    height: 100vh;
-}
-
-.zoom2-mask{
+.chaser-el{
     position: absolute;
-    height: 100%;
-    width: 100vw;
-    object-fit: cover;
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    border-radius: 50%;
 }
 
-.projects-link{
-    width: 50%;
-    display: block;
-    position: absolute;
-}
-
-.projects-link:nth-child(even){
-    right: 0;
-}
-
-.cursor{
-    position: absolute;
+.chaser-center{
     height: 40px;
     width: 40px;
-    background: #252525;
-    pointer-events: none;
+    border: 1px solid red;
 }
 
-.chart{
+.container{
+    height: 50%;
     width: 50%;
-}
-
-button{
-    padding: 16px 32px;
-    background: #d3cbc6;
-    border-radius: 8px;
-}
-
-.animation--test{
-    height: 20px;
-    width: 20px;
-    background: green;
+    background-color: #d3cbc6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

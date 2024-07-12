@@ -1,8 +1,38 @@
 import { createMouseMotion } from "./lib/scripts/createMouseMotion.js"
 import { createPageTransition } from "./lib/scripts/createPageTransition.js"
 import { createZoomMotion } from "./lib/scripts/createZoomMotion.js"
+import { createMousePBM } from "./lib/scripts/createMousePBM.js"
+import { createZoomPBM } from "./lib/scripts/createZoomPBM.js"
+import Lenis from 'lenis'
+
+const lenis = new Lenis()
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
 
 function init() {
+
+
+    createMousePBM("#chaser", {
+        damping: .6,
+        speed: 2,
+        response: 0,
+        range: 20,
+    })
+
+
+    createZoomPBM("#scroll", {
+        damping: 2,
+        speed: 4,
+        response: -1,
+        scale: 10,
+    })
+
+    
     //createMotion()?
     // createPageTransition({
     //     sync: true,
@@ -277,7 +307,7 @@ function init() {
                 {
                     target: "#motion-transition",
                     keyframes: {
-                        clipPath: ["inset(100% 0 0 0)", "inset(0 0)"],
+                        clipPath: ["inset(0 100% 0 0)", "inset(0 0)"],
                     },
                     duration: 750,
                     ease: "ease",
@@ -313,7 +343,7 @@ function init() {
                 {
                     target: "#motion-transition",
                     keyframes: {
-                        clipPath: ["inset(0 0)", "inset(0 0 100% 0)"],
+                        clipPath: ["inset(0 0)", "inset(0 0 0 100%)"],
                     },
                     duration: 750,
                     ease: "ease",
@@ -330,54 +360,54 @@ function init() {
         },
     ])
 
-    createMouseMotion("#js-mousechaser", {
-        scope: "#js-container",
-        range: 20,
-        duration: 2000,
-        ease: "linear",
-        use3D: true,
-    })
+    // createMouseMotion("#js-mousechaser", {
+    //     scope: "#js-container",
+    //     range: 20,
+    //     duration: 2000,
+    //     ease: "linear",
+    //     use3D: true,
+    // })
 
-    createMouseMotion("#js-mousechaser", {
-        scope: "#js-container",
-        range: 20,
-        duration: 1600,
-        use3D: true,
-    })
+    // createMouseMotion("#js-mousechaser", {
+    //     scope: "#js-container",
+    //     range: 20,
+    //     duration: 1600,
+    //     use3D: true,
+    // })
 
-    createMouseMotion("#js-container", {
-        scope: "#js-container",
-        range: 30,
-        duration: 1600,
-    })
+    // createMouseMotion("#js-container", {
+    //     scope: "#js-container",
+    //     range: 30,
+    //     duration: 1600,
+    // })
 
-    createMouseMotion("#js-mousechaser3", {
-        scope: "#js-container3",
-        range: -100,
-        ease: "ease",
-        returnOnLeave: false,
-        duration: 800,
-    })
+    // createMouseMotion("#js-mousechaser3", {
+    //     scope: "#js-container3",
+    //     range: -100,
+    //     ease: "ease",
+    //     returnOnLeave: false,
+    //     duration: 800,
+    // })
 
     // createMouseMotion("#js-mousechaser4", {
     //     range: 100,
     //     duration: 800,
     // })
 
-    createZoomMotion(".zoom1", {
-        scale: 0.9,
-        direction: "out",
-        pin: true
-    })
+    // createZoomMotion(".zoom1", {
+    //     scale: 0.9,
+    //     direction: "out",
+    //     pin: true
+    // })
 
-    createZoomMotion(".zoom2-mask", {
-        direction: "in",
-        start: "top",
-        end: 3000, 
-        pin: ".zoom2-container",
-        ease: "expo",
-        scale: 4,
-    })
+    // createZoomMotion(".zoom2-mask", {
+    //     direction: "in",
+    //     start: "top",
+    //     end: 3000, 
+    //     pin: ".zoom2-container",
+    //     ease: "expo",
+    //     scale: 4,
+    // })
 }
 init()
 
