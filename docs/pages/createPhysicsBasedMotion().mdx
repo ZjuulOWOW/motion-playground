@@ -1,4 +1,5 @@
-import { Visual } from "../components/SecondOrderDynamics/index"
+import { Visual } from "../components/SecondOrderDynamics/index.jsx"
+import { Codepen } from "../components/Codepen.jsx"
 
 # createPhysicsBasedMotion()
 
@@ -12,8 +13,28 @@ The `createPhysicsBasedMotion()` utility provides a way to create animations tha
 
 ## Basic example
 
-## Advanced example
+<Codepen src="https://codepen.io/qztweede/embed/abrvXdb?default-tab=result&editable=true&theme-id=dark"></Codepen>
+<Codepen src="https://codepen.io/qztweede/embed/LYopKKg?default-tab=result&editable=true&theme-id=dark"></Codepen>
 
 ## Syntax
 
+```createPhysicsBasedMotion(speed, damping, response, x0)```
+
+| Name     | Type   | Default value | Description                                   |
+|----------|--------|---------------|-----------------------------------------------|
+| speed    | number | 1             | Defines the shape of the motion.   |
+| damping  | number | 1             | Defines how the motion settles over time. |
+| response | number | 0             | Defines the acceleration of the motion. |
+| x0       | number | 0             | The initial value or starting point of the motion. |
+
+```update(step, x, xd)```
+
+| Name     | Type   | Description                                   |
+|----------|--------|-----------------------------------------------|
+| step    | number | The step size used to calculate the next position. Typically, this is the delta time.   |
+| x  | number | The next value or target of the motion. |
+| xd | number | Optional parameter to provide the velocity. |
+
 ## Demos
+
+<video controls src="/assets/Physics based motion.mov"></video>

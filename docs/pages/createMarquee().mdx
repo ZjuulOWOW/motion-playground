@@ -1,0 +1,45 @@
+import { Visual } from "../components/SecondOrderDynamics/index.jsx"
+import { Codepen } from "../components/Codepen.jsx"
+
+# createMarquee()
+
+## Intro
+
+Creates a marquee animation effect on the target elements. The marquee effect involves moving the content of the target elements horizontally, either to the left or right, in a continuous loop.
+
+## Basic example
+
+<Codepen src="https://codepen.io/stef-owow/embed/WNLXmBE?default-tab=result&editable=true&theme-id=dark"></Codepen>
+
+## Syntax
+
+```createMarquee(target, marqueeParams, motionParams)```
+
+| Name     | Description                                   |
+|----------|-----------------------------------------------|
+| target   | The target elements to apply the marquee effect to. Can be a single target or an array of targets.   |
+| marqueeParams  | Optional parameters for the marquee effect, including speed, scroll velocity, direction, whether to create a DOM, scroll trigger variables, and callbacks for update and creation events. |
+| motionParams | Optional parameters for the motion effect, including triggers and behavior settings. |
+
+### Parameters
+
+| Name | Type | Default Value | Description |
+|----------------|-----------|---------------|-------------|
+| speed          | number    | 1             | Defines the speed of the marquee effect. |
+| scrollVelocity | number    | 0             | Specifies the scroll velocity of the marquee effect. |
+| direction      | string    | ```ltr```         | Sets the direction of the marquee effect. Options include: ```ltr```, ```rtl```, ```scroll```, ```scroll-reverse```. |
+| draggable      | boolean   | false         | Enables the marquee effect to be draggable. |
+| stopOnDrag     | boolean   | false         | Stops the marquee effect when dragging. |
+| onCreated      | function  | null          | Callback function that is triggered when the marquee effect is created. |
+| onUpdate       | function  | null          | Callback function that is triggered when the marquee effect is updated. |
+| onDestroyed    | function  | null          | Callback function that is triggered when the marquee effect is destroyed. |
+| beforeCreate   | function  | null          | Callback function that is triggered before the marquee effect is created. |
+| beforeDestroy  | function  | null          | Callback function that is triggered before the marquee effect is destroyed. |
+| createDOM      | boolean   | false         | Creates a DOM element for the marquee effect. |
+| scrollTriggerVars | object | null      | GSAP ScrollTrigger variables for the marquee effect. |
+| draggableVars | object | null      | GSAP Draggable variables for the marquee effect. |
+
+
+## Demos
+
+<video controls src="/assets/Marquee.mov"></video>

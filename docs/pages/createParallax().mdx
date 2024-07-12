@@ -1,0 +1,36 @@
+import { Visual } from "../components/SecondOrderDynamics/index.jsx"
+import { Codepen } from "../components/Codepen.jsx"
+
+# createParallax()
+
+## Intro
+
+Creates a parallax scrolling effect on the target elements. The parallax effect involves moving the background content at a slower rate than the foreground content, creating an illusion of depth.
+
+## Basic example
+
+<Codepen src="https://codepen.io/qztweede/embed/OJYmJGb?default-tab=result&editable=true&theme-id=dark"></Codepen>
+
+## Syntax
+
+```createParallax(target, parallaxParams, motionParams)```
+
+| Name     | Description                                   |
+|----------|-----------------------------------------------|
+| target   | The target elements to apply the parallax effect to. Can be a single MotionTarget or an array of MotionTargets.   |
+| parallaxParams  | Optional parameters for the parallax effect, including scroll trigger variables, speed, CSS unit for the parallax movement, and a custom updater function. |
+| motionParams | Optional parameters for the motion effect, including triggers and behavior settings. |
+
+### Parameters
+
+| Name | Type | Default Value | Description |
+|----------------|-----------|---------------|-------------|
+| speed          | number    | 1             | Defines the speed of the parallax effect. |
+| cssUnit        | string    | '%'          | Defines the CSS unit for the parallax movement. |
+| updater        | function  | null          | A custom updater function that is called on every frame. Returns animation progress. |
+| createDOM      | boolean   | true          | Creates a DOM element for the parallax effect. |
+| scrollTriggerVars | object | null      | GSAP ScrollTrigger variables for the parallax effect. |
+
+## Demos
+
+<video controls src="/assets/Parallax.mov"></video>
